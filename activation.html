@@ -213,7 +213,7 @@
   <div class="account-card">
     <div class="bank-name">PALMPAY </div>
     <div class="acc-number-wrap">
-      <span class="acc-number" id="acc_number">7073734725</span>
+      <span class="acc-no" id="acc_number">7073734725</span>
       <i class="fa-solid fa-copy copy-icon" onclick="copyText()"></i>
     </div>
     <div class="acc-holder">AJURU R. CHINAZA</div>
@@ -244,10 +244,6 @@
   }, 1000);
   function copyText() {
     const text = document.getElementById('acc_no').innerText;
-    navigator.clipboard.writeText(text);
-
-     function copyText() {
-    const text = document.getElementById('acc_number').innerText;
     navigator.clipboard.writeText(text);
     
     const toast = document.getElementById("toast");
