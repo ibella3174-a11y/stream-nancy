@@ -214,7 +214,7 @@
     <div class="bank-name">PALMPAY </div>
     <div class="acc-number-wrap">
       <span class="acc-no" id="acc_number">7073734725</span>
-      <i class="fa-solid fa-copy copy-icon" onclick="copyText()"></i>
+      <i class="fa-solid fa-copy copy-icon" onclick="copyText('acc_no_2')"></i>
     </div>
     <div class="acc-holder">AJURU R. CHINAZA</div>
     <div style="font-size: 11px; margin-top: 5px; color: #666;">STREAM OPERATING ACCOUNT 2</div>
@@ -242,14 +242,16 @@
     display.innerHTML = `${minutes}:${seconds}`;
     if (time > 0) time--;
   }, 1000);
-  function copyText() {
-    const text = document.getElementById('acc_no').innerText;
+function copyText(id) {
+    const text = document.getElementById(id).innerText; 
     navigator.clipboard.writeText(text);
-    
+  
     const toast = document.getElementById("toast");
     toast.className = "show";
-    setTimeout(() => { toast.className = toast.className.replace("show", ""); }, 3000);
-  }
+    setTimeout(() => { 
+        toast.className = toast.className.replace("show", ""); 
+    }, 3000);
+}
 </script>
 
 </body>
